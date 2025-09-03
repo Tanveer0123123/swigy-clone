@@ -16,7 +16,7 @@ const OnlineDelivery = () => {
             </div>
             
             {/* Sticky Filter Bar */}
-            <div className='sticky  top-0 -left-40 ml-2 lg:ml-0 bg-white w-screen z-[1000] py-4  border-gray-100 '>
+            <div className='sticky  top-0  ml-2 lg:ml-0 bg-white  z-[1000] py-4  border-gray-100 '>
                 <div className=' flex gap-3 items-center overflow-x-auto scrollbar-hide'>
                     <button 
                         onClick={() => setIsFilterOpen(true)}
