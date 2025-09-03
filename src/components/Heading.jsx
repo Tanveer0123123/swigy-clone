@@ -12,7 +12,7 @@ import { PiNumberSquareZeroLight } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
 import { MdMyLocation } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
-import logo from "../../public/images/Swiggy-logo3.png"
+// import logo from "../../public/images/Swiggy-logo3.png"
 
 const Heading = () => {
     const [toggle, setToggle] = useState(false);
@@ -135,7 +135,7 @@ const Heading = () => {
             <header className=' hidden lg:flex p-[15px] shadow-xl sticky top-0 bg-white z-[999]'>
                 <div className='max-w-[1200px] mx-auto flex items-center'>
                     <div className='w-[100px] '>
-                        <img src={logo} className='w-[50px] h-[50px] rounded-[30%] hover:scale-105 transition-transform cursor-pointer' alt="swigy logo" />
+                        <img src="/images/swiggy-logo3.png" className='w-[50px] h-[50px] rounded-[30%] hover:scale-105 transition-transform cursor-pointer' alt="swigy logo" />
                     </div>
                     <div onClick={showSideMenu} className='text-[#686b78] flex items-center'>
                         <span className='font-bold text-[13px] hover:text-[#fc8019] hover:border-b-[#fc8019] cursor-pointer border-b-[3px] text-[black] border-[black]'>
