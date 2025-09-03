@@ -1,60 +1,136 @@
-import React, { useEffect } from 'react'
+
+// import React, { useRef } from 'react'
+// import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+// import { category } from '../category.js';
+// import { useState } from 'react';
+
+// const Category = () => {
+//   const scrollRef = useRef(null);
+
+//   const cardWidth = 160;
+//   const visibleCards = 7;
+//   const step = 3;
+
+//   const nextSlide = () => {
+//     if (!scrollRef.current) return;
+//     scrollRef.current.scrollBy({ left: cardWidth * step, behavior: 'smooth' });
+//   };
+
+//   const prevSlide = () => {
+//     if (!scrollRef.current) return;
+//     scrollRef.current.scrollBy({ left: -cardWidth * step, behavior: 'smooth' });
+//   };
+
+//   return (
+//     <div className='max-w-[1050px] mx-auto '>
+//       <div className='flex my-3 items-center justify-between'>
+//         <div className='text-[25px] font-bold'>What's on your mind?</div>
+//         <div className='flex'>
+//           <div
+//             onClick={prevSlide}
+//             className='flex cursor-pointer justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2'>
+//             <FiArrowLeft />
+//           </div>
+//           <div
+//             onClick={nextSlide}
+//             className='flex cursor-pointer justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2'>
+//             <FiArrowRight />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Slider with scrollbar (hidden) */}
+//       <div
+//         ref={scrollRef}
+//         className="flex gap-4  overflow-x-auto scroll-smooth scrollbar-hide"
+//       >
+//         {category.map((cat, index) => (
+//           <div key={index} className="w-[150px] shrink-0 ">
+//             <img src={`./images/${cat.image}`} alt={cat.path} />
+//           </div>
+//         ))}
+//       </div>
+
+//       <hr className='border-[1px] border-gray-300 my-6' />
+//     </div>
+//   )
+// }
+
+// export default Category
+
+
+
+import React, { useRef } from 'react'
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { category } from '../category.js';
-import { useState } from 'react';
 
 const Category = () => {
+  const scrollRef = useRef(null);
 
-    // const [categories, setCategories] = useState([]);
+  const cardWidth = 160;
+  const step = 3;
 
-    // const fetchCategories = async () => {
-    //     const response = await fetch('https://api.example.com/categories');
-    //     const data = await response.json();
-    //     setCategories(data);
-    // }
+  const nextSlide = () => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: cardWidth * step, behavior: 'smooth' });
+  };
 
-    // useEffect(() => {
-    //     console.log(category);
-    //     fetchCategories();
-    // }, []);
+  const prevSlide = () => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: -cardWidth * step, behavior: 'smooth' });
+  };
 
-    const [slide, setSlide] = useState(0);
+  return (
+    <div className='max-w-[1050px] mx-auto'>
+      {/* Header */}
+      <div className='flex my-3 items-center justify-between'>
+        <div className='text-[25px] font-bold ml-[30px] md:ml-0 '>What's on your mind?</div>
 
-    const nextSlide = () => {
-        console.log(category.length)
-        console.log(slide + 3)
-        if(category.length - 8 == slide) return false;
-        setSlide(slide + 3);
-    }
-    const prevSlide = () => {
-        if(slide == 0) return false;
-        setSlide(slide - 3);
-    }
-
-    return (
-        <div className='max-w-[1200px] mx-auto'>
-            <div className='flex my-3 items-center justify-between'>
-                <div className='text-[25px] font-bold'>What's on your mind?</div>
-                <div className='flex'>
-                    <div onClick={prevSlide} className='flex cursor-pointer justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2'><FiArrowLeft /></div>
-                    <div onClick={nextSlide} className='flex cursor-pointer justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2'><FiArrowRight /></div>
-                </div>
-            </div>
-            <div className='flex overflow-hidden'>
-                {category.map((cat, index) => {
-                    return(
-                        <div key={index}
-                        style={{transform: `translateX(-${slide * 100}%)`}}
-                         className='w-[150px] shrink-0 duration-500 '>
-                            <img   src={`./images/${cat.image}`} alt={cat.path} />
-                        </div>
-                    )
-                })}
-            </div>
-            <hr className='border-[1px] border-gray-300 my-6' />
-             
+        {/* Arrows only desktop */}
+        <div className='hidden md:flex'>
+          <div
+            onClick={prevSlide}
+            className='flex cursor-pointer justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2'
+          >
+            <FiArrowLeft />
+          </div>
+          <div
+            onClick={nextSlide}
+            className='flex cursor-pointer justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2'
+          >
+            <FiArrowRight />
+          </div>
         </div>
-    )
+      </div>
+
+      {/* Desktop → Horizontal Slider */}
+      <div
+        ref={scrollRef}
+        className="hidden md:flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
+      >
+        {category.map((cat, index) => (
+          <div key={index} className="w-[150px] shrink-0">
+            <img src={`./images/${cat.image}`} alt={cat.path} />
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile → Grid (4x2) */}
+      <div  className="grid grid-cols-4   gap-0 md:hidden w-full">
+        {category.slice(0, 8).map((cat, index) => (
+          <div key={index} className="flex justify-center ">
+            <img
+              src={`./images/${cat.image}`}
+              alt={cat.path}
+              className="w-[70px] h-[70px]  object-contain"
+            />
+          </div>
+        ))}
+      </div>
+
+      <hr className='border-[1px] border-gray-300 my-6' />
+    </div>
+  )
 }
 
 export default Category

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const cuisines = [
-    "Chinese Restaurant Near Me",
+    "Chinese Restaurant  Near Me",
     "South Indian Restaurant Near Me",
     "Indian Restaurant Near Me",
     "Kerala Restaurant Near Me",
@@ -33,23 +33,23 @@ const Cuisines = () => {
     const visibleCuisines = showAll ? cuisines : cuisines.slice(0, 9);
 
     return (
-        <div className=" max-w-[1100px] mx-auto px-4 py-16">
+        <div className=" max-w-[1000px] mx-auto px-4 py-16">
             <h2 className="text-2xl font-bold mb-6">Best Cuisines Near Me</h2>
 
-            <div className="grid grid-cols-4 md:grid-cols-4 gap-6">
+            <div className=" w-[400px] md:w-[1000px] lg:w-[1000px] grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
                 {visibleCuisines.map((cuisine, index) => (
                     <div
                         key={index}
-                        className="border border-gray-300 rounded-lg p-4 text-center text-[17px] font-medium hover:shadow-sm cursor-pointer"
+                        className="  border border-gray-300 rounded-lg p-3 text-center text-[13px] md:text-[17px] lg:text-[17px] font-medium hover:shadow-sm cursor-pointer"
                     >
-                        {cuisine}
+                       {cuisine}
                     </div>
                 ))}
 
                 {!showAll && (
                     <div
                         onClick={() => setShowAll(true)}
-                        className="border border-gray-300 rounded-lg p-4 text-center text-sm font-medium text-orange-500 cursor-pointer hover:bg-orange-50"
+                        className="border border-gray-300 rounded-lg p-4 text-center text-[18px] font-bold text-orange-500 cursor-pointer hover:bg-orange-50"
                     >
                         Show More ↓
                     </div>
@@ -57,11 +57,11 @@ const Cuisines = () => {
             </div>
              
             <h2 className="text-2xl font-bold my-10">Explore Every Restaurants Near Me</h2>
-            <div className="grid grid-cols-4 md:grid-cols-4 gap-6">
+            <div className=" w-[400px] md:w-[1000px] lg:w-[1000px]  lg:grid-cols-4 grid grid-cols-2 md:grid-cols-4   gap-6">
                 {resturent.map((restaurant, index) => (
                     <div
                         key={index}
-                        className="border border-gray-300 rounded-lg p-4 text-center text-[17px] font-medium hover:shadow-sm cursor-pointer"
+                        className="border border-gray-300 rounded-lg p-4 text-center text-[17px] md:text-[17px] lg:text-[17px] font-medium hover:shadow-sm cursor-pointer"
                     >
                         {restaurant}
                     </div>

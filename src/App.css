@@ -50,3 +50,25 @@
 .image-overlay{
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 1));
 }
+
+/* Scrollbar Hide CSS */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE aur Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.my-sticky {
+  width: 80%;
+  background: transparent;
+  margin: 0 auto;
+}
+
+/* Scroll ke baad sticky state detect karna bina JS ke directly possible nahi hai,
+   lekin ek trick ye hai ki sticky ko fixed treat karo */
+.my-sticky:is(:has(+ *)) {
+  width: 100%;
+  background: white;
+}

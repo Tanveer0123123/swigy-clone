@@ -6,6 +6,7 @@ import TopRest from './components/TopRest'
 import OnlineDelivery from './components/OnlineDelivery'
 import Cuisines from './components/Cuisines'
 import Footer from './components/Footer'
+// import Sticky from './components/Sticky'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Heading />
       <Category />
       <TopRest/>
+      {/* <Sticky /> */}
       <OnlineDelivery/>
       <Cuisines/>
       <Footer/>
