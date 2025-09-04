@@ -6,7 +6,7 @@ const Card = (props) => {
     return (
         <div className="flex-shrink-0 ml-2 w-[140px] sm:w-[160px] md:w-[240px] gap-0 cursor-pointer">
             <div className="group ">
-                <div className="group-hover:scale-95 duration-150 ease-in-out">
+                <div className=" group-hover:scale-95 duration-150 ease-in-out">
                     <div className="h-[150px] sm:h-[170px] md:h-[182px] rounded-[15px] overflow-hidden relative z-[-1]">
                         <img
                             src={`./images/${props.image}`}

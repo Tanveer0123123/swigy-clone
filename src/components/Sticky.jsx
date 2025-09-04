@@ -12,12 +12,13 @@ const Sticky = () => {
     const [selectedSort, setSelectedSort] = useState('Relevance (Default)')
 
     return (
-        <div className='max-w-[1050px] mx-auto mb-10'>
-            <div className='flex my-3 items-center justify-between'>
+        <div className='sticky max-md:top-20 top-0 bg-white w-full z-[1000]  mb-10'>
+            <div className='container mx-auto px-4'>
+            {/* <div className='flex my-3 items-center justify-between'>
                 <div className='text-[25px] font-bold'>Restaurants with online food delivery in Bhopal</div>
-            </div>
+            </div> */}
             {/* Sticky Filter Bar */}
-            <div className='sticky  top-0 -left-40 bg-white w-screen z-[1000] py-4  border-gray-100 '>
+            <div className=' bg-white  py-4 mx-auto border-gray-100 '>
                 <div className='flex gap-3 items-center overflow-x-auto scrollbar-hide'>
                     <button
                         onClick={() => setIsFilterOpen(true)}
@@ -159,6 +160,7 @@ const Sticky = () => {
                     </div>
                 </div>
             )}
+            </div>
         </div>
     )
 }

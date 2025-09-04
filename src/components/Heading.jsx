@@ -80,7 +80,7 @@ const Heading = () => {
                 }}
                 className='w-[500px] bg-white h-full fixed duration-[400ms] z-[999999]'
                 style={{
-                    left: toggle ? '0%' : '-100%',
+                    left: toggle ? '0%' : '-150%',
                     top: 0
                 }}
             >
@@ -132,7 +132,7 @@ const Heading = () => {
                 </div>
             </div>
 
-            <header className=' hidden lg:flex p-[15px] shadow-xl sticky top-0 bg-white z-[999]'>
+            <header className=' hidden md:flex p-[15px] shadow-xl sticky top-0 bg-white z-[999]'>
                 <div className='max-w-[1200px] mx-auto flex items-center'>
                     <div className='w-[100px] '>
                         <img src="/images/swiggy-logo3.png" className='w-[50px] h-[50px] rounded-[30%] hover:scale-105 transition-transform cursor-pointer' alt="swigy logo" />
@@ -157,9 +157,9 @@ const Heading = () => {
                 </div>
             </header>
 
-            <header className=" m-3 lg:hidden md:hidden flex items-center justify-between  py-3 shadow-md sticky top-0 bg-white z-[999]">
+            <header className=" pt-12 lg:hidden md:hidden flex items-center justify-between  py-3 shadow-md sticky top-0 bg-white z-[999]">
                 {/* Back Arrow + Title */}
-                <div className="flex items-center gap-2">
+                <div className=" ml-6 flex items-center gap-2">
                     <button className="text-xl">
                         ←
                     </button>
@@ -168,7 +168,7 @@ const Heading = () => {
                 </div>
 
                 {/* Profile Icon */}
-                <div className="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center">
+                <div className=" mr-3 w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center">
                     <FaRegUser />
                 </div>
             </header>
