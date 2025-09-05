@@ -36,7 +36,7 @@ const Cuisines = () => {
         <div className=" max-w-[1000px] mx-auto px-4 py-16">
             <h2 className="text-2xl font-bold mb-6">Best Cuisines Near Me</h2>
 
-            <div className=" w-[370px] md:w-[1000px] lg:w-[1000px] grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+            <div className=" max-w-6xl grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
                 {visibleCuisines.map((cuisine, index) => (
                     <div
                         key={index}
@@ -57,7 +57,7 @@ const Cuisines = () => {
             </div>
              
             <h2 className="text-2xl font-bold my-10">Explore Every Restaurants Near Me</h2>
-            <div className=" w-[370px] md:w-[1000px] lg:w-[1000px]  lg:grid-cols-4 grid grid-cols-2 md:grid-cols-4   gap-6">
+            <div className=" max-w-6xl grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 ">
                 {resturent.map((restaurant, index) => (
                     <div
                         key={index}

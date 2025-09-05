@@ -16,7 +16,7 @@ const App = () => {
       <TopRest />
       <div className='max-w-[1050px] mx-auto'>
         <div className='flex my-3 items-center justify-between'>
-          <div className='text-[25px] font-bold ml-3'>Restaurants with online food delivery in Bhopal</div>
+          <div className='text-[25px] font-bold ml-3 lg:pl-10'>Restaurants with online food delivery in Bhopal</div>
         </div>
       </div>
       <Sticky />

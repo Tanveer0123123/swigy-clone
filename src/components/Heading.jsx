@@ -12,6 +12,7 @@ import { PiNumberSquareZeroLight } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
 import { MdMyLocation } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
+import { IoIosArrowDropdown } from "react-icons/io";
 // import logo from "../../public/images/Swiggy-logo3.png"
 
 const Heading = () => {
@@ -140,8 +141,8 @@ const Heading = () => {
                     <div onClick={showSideMenu} className='text-[#686b78] flex items-center'>
                         <span className='font-bold text-[13px] hover:text-[#fc8019] hover:border-b-[#fc8019] cursor-pointer border-b-[3px] text-[black] border-[black]'>
                             Aish Bagh</span>
-                        <p className='cursor-pointer text-[14px] ml-2'>LIG Colony, Bhopal, Madhya Pradesh</p>
-                        <FaAngleDown className='text-[0.9rem] cursor-pointer text-[#fc8019] ml-1' />
+                        <p className='cursor-pointer text-[14px] ml-2 mr-2'>LIG Colony, Bhopal, Madhya Pradesh</p>
+                        <FaAngleDown className='text-[0.9rem] cursor-pointer text-[#fc8019] ml-1 mr-8' />
                     </div>
                     <nav className='flex list-none gap-4 ml-auto text-[18px] '>
                         {
@@ -157,14 +158,14 @@ const Heading = () => {
                 </div>
             </header>
 
-            <header className=" pt-12 lg:hidden md:hidden flex items-center justify-between  py-3 shadow-md sticky top-0 bg-white z-[999]">
+            <header className=" lg:hidden border-b border-gray-300 md:hidden flex items-center justify-between  py-3 shadow-md sticky top-0 bg-white z-[999]">
                 {/* Back Arrow + Title */}
                 <div className=" ml-6 flex items-center gap-2">
                     <button className="text-xl">
                         ←
                     </button>
                     <h1 className="font-semibold">Other</h1>
-                    <FaAngleDown className="ml-1 text-gray-600" />
+                    <IoIosArrowDropdown className="ml-1 text-gray-600" />
                 </div>
 
                 {/* Profile Icon */}

@@ -12,7 +12,7 @@ const Sticky = () => {
     const [selectedSort, setSelectedSort] = useState('Relevance (Default)')
 
     return (
-        <div className='lg:pl-25  sticky max-md:top-20 top-0 bg-white w-full z-[1000]  mb-10 box-border'>
+        <div className='lg:pl-45  sticky max-md:top-14 top-0 border-t lg:border-none  border-gray-200 bg-white w-full z-[1000]  mb-10 box-border'>
             <div className=' max-w-[1200px] mx-auto px-4'>
             {/* <div className='flex my-3 items-center justify-between'>
                 <div className='text-[25px] font-bold'>Restaurants with online food delivery in Bhopal</div>
