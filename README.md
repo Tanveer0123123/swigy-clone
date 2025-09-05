@@ -1,4 +1,4 @@
-Swiggy Clone :- https://swigy-clone-3o6g.vercel.app/
+Swiggy Clone :- https://swigy-clone-z9da.vercel.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
