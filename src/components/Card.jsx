@@ -4,7 +4,7 @@ import React from 'react'
 
 const Card = (props) => {
     return (
-        <div className="flex-shrink-0 ml-2 w-[140px] sm:w-[160px] md:w-[240px] gap-0 cursor-pointer">
+        <div className="flex-shrink-0 ml-2 w-[140px] sm:w-[160px] md:w-[280px] gap-0 cursor-pointer">
             <div className="group ">
                 <div className=" group-hover:scale-95 duration-150 ease-in-out">
                     <div className="h-[150px] sm:h-[170px] md:h-[182px] rounded-[15px] overflow-hidden relative z-[-1]">
@@ -13,18 +13,18 @@ const Card = (props) => {
                             alt="Food"
                             className="w-full h-full object-cover"
                         />
-                        <div className="image-overlay absolute w-full h-full top-0 flex items-end p-2 text-[15px] sm:text-[18px] md:text-[20px] font-bold text-white tracking-tight">
+                        <div className="image-overlay absolute w-full h-full top-0 flex items-end p-2 text-[15px] sm:text-[18px] md:text-[20px] font-extrabold text-[rgba(255,255,255,0.92)] tracking-tight">
                             {props.offer}
                         </div>
                     </div>
                     <div className="mt-2 sm:mt-2 md:mt-3 text-lg sm:text-xl md:text-xl font-bold">
                         {props.title}
                     </div>
-                    <div className="text-sm sm:text-base md:text-base">
-                        <Start className="inline-block mr-1" /> {props.rating}
-                        <span className="ml-2">{props.minTime} - {props.maxTime} mins</span>
+                    <div className="text-sm sm:text-base md:text-base font-normal">
+                        <Start className="inline-block mr-1 font-medium" /> {props.rating}
+                        <span className="ml-2 font-medium">{props.minTime} - {props.maxTime} mins</span>
                     </div>
-                    <div className="text-sm sm:text-base md:text-base">
+                    <div className="text-sm sm:text-base md:text-base text-[#02060C99]">
                         {props.name}
                         <br />
                         {props.place}

@@ -138,7 +138,7 @@ const Category = () => {
                   <img
                     src={`./images/${cat.image}`}
                     alt={cat.path}
-                    className="w-[150px] h-[100px] md:h-[150px] object-contain"
+                    className="w-[150px] h-[100px] md:h-[150px] my-6 object-contain"
                   />
                   <p className="text-sm mt-1">{cat.name}</p>
                 </div>

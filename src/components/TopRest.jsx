@@ -125,7 +125,7 @@ const TopRest = () => {
         ))}
       </div>
 
-      <hr className="border-[1px] border-gray-300 my-12" />
+      <hr className="border-[1px] border-gray-100 my-12" />
     </div>
   )
 }
