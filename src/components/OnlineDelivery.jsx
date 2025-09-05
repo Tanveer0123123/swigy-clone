@@ -172,10 +172,10 @@ const OnlineDelivery = (props) => {
                 }
             </div> */}
 
-            <div className=' lg:ml-10 grid grid-cols-2 lg:grid-cols-4 gap-6 mt-4 max-w-[1050px] mx-auto'>
+            <div className='  lg:ml-10 grid grid-cols-2 lg:grid-cols-4 gap-6 mt-4 max-w-[1050px] mx-auto px-4 md:px-0'>
                 {
                     resturentChain.map((d, i) => (
-                        <div key={i} className="group cursor-pointer hover:scale-95 transition-all duration-300">
+                        <div key={i} className=" group cursor-pointer hover:scale-95 transition-all duration-300">
                             <div className="relative">
                                 <img src={`./images/${d.image}`} alt={d.name} className="w-full h-[170px] object-cover rounded-2xl" />
                                 <div className="absolute bottom-0 w-full h-[90px] bg-gradient-to-t from-black/70 to-transparent rounded-b-2xl">

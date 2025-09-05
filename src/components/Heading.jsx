@@ -81,7 +81,7 @@ const Heading = () => {
                 }}
                 className='w-[500px] bg-white h-full fixed duration-[400ms] z-[999999]'
                 style={{
-                    left: toggle ? '0%' : '-150%',
+                    left: toggle ? '0%' : '-170%',
                     top: 0
                 }}
             >
@@ -161,15 +161,15 @@ const Heading = () => {
             <header className=" lg:hidden border-b border-gray-300 md:hidden flex items-center justify-between  py-3 shadow-md sticky top-0 bg-white z-[999]">
                 {/* Back Arrow + Title */}
                 <div className=" ml-6 flex items-center gap-2">
-                    <button className="text-xl">
+                    <button className="text-[25px] font-bold">
                         ←
                     </button>
-                    <h1 className="font-semibold">Other</h1>
-                    <IoIosArrowDropdown className="ml-1 text-gray-600" />
+                    <h1 className="font-bold">Other</h1>
+                    <IoIosArrowDropdown className=" text-[20px] font-bold text-gray-600" />
                 </div>
 
                 {/* Profile Icon */}
-                <div className=" mr-3 w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center">
+                <div className=" mr-4 w-10 h-10  rounded-full bg-gray-800 text-white flex items-center justify-center">
                     <FaRegUser />
                 </div>
             </header>

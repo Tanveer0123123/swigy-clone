@@ -104,7 +104,7 @@ const Category = () => {
       </div>
 
       {/* Desktop → Horizontal Slider */}
-      <div
+      {/* <div
         ref={scrollRef}
         className="hidden md:flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
       >
@@ -113,20 +113,66 @@ const Category = () => {
             <img src={`./images/${cat.image}`} alt={cat.path} />
           </div>
         ))}
+      </div> */}
+
+      <div
+        ref={scrollRef}
+        className="flex overflow-x-auto scroll-smooth scrollbar-hide gap-6"
+      >
+        {Array.from({ length: Math.ceil(category.length / 8) }).map((_, pageIndex) => (
+          <div
+            key={pageIndex}
+            className="
+        snap-start shrink-0 
+        md:flex md:gap-4 md:w-auto   /* desktop view */
+        grid grid-cols-4 w-[350px]  /* mobile view */
+      "
+          >
+            {category
+              .slice(pageIndex * 8, pageIndex * 8 + 8)
+              .map((cat, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center"
+                >
+                  <img
+                    src={`./images/${cat.image}`}
+                    alt={cat.path}
+                    className="w-[150px] h-[100px] md:h-[150px] object-contain"
+                  />
+                  <p className="text-sm mt-1">{cat.name}</p>
+                </div>
+              ))}
+          </div>
+        ))}
       </div>
 
+
       {/* Mobile → Grid (4x2) */}
-      <div  className="grid grid-cols-4   gap-0 md:hidden w-full">
+      {/* <div>
+        <div ref={scrollRef}  className="grid grid-cols-4   gap-0 md:hidden w-full overflow-x-auto scroll-smooth scrollbar-hide">
         {category.slice(0, 8).map((cat, index) => (
           <div key={index} className="flex justify-center ">
             <img
               src={`./images/${cat.image}`}
               alt={cat.path}
-              className="w-[70px] h-[70px]  object-contain"
+              className="w-[90px] h-[90px]  object-contain"
             />
           </div>
         ))}
       </div>
+      <div ref={scrollRef}  className="grid grid-cols-4   gap-0 md:hidden w-full overflow-x-auto scroll-smooth scrollbar-hide">
+        {category.slice(0, 8).map((cat, index) => (
+          <div key={index} className="flex justify-center ">
+            <img
+              src={`./images/${cat.image}`}
+              alt={cat.path}
+              className="w-[90px] h-[90px]  object-contain"
+            />
+          </div>
+        ))}
+      </div>
+      </div> */}
 
       <hr className='border-[1px] border-gray-300 my-6' />
     </div>

@@ -78,5 +78,21 @@ export const category=[
     {
         "image": "South_Indian_4.jpeg",
         "path": "south-indian"
+    },
+    {
+        "image": "Pure_Veg.jpeg",
+        "path": "pure-veg"
+    },
+    {
+        "image": "Rolls.jpeg",
+        "path": "rolls"
+    },
+    {
+        "image": "Salad.jpeg",
+        "path": "salad"
+    },
+    {
+        "image": "South_Indian_4.jpeg",
+        "path": "south-indian"
     }
 ]
